@@ -23,7 +23,7 @@ const Home = () => {
                             <div class="navbar-end">
                                 <div class="tabs is-right">
                                     <ul>
-                                        <li><a>Home</a></li>
+                                        <li><a href="/">Home</a></li>
                                     </ul>
                                 </div>
                             </div>
