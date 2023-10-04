@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import 'bulma/css/bulma.min.css';
-import logo from './logo.svg';
 import './Home.css';
 
 const Home = () => {
