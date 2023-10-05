@@ -49,7 +49,7 @@ const Home = () => {
         </div>
         <section class="container">
             <div class="columns features is-multiline is-mobile">
-                <div class="column is-4 is-flex">
+                <div class="column is-4-desktop is-flex is-full-mobile is-6-tablet">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
                             <i class="fa fa-paw"></i>
@@ -62,7 +62,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="column is-4 is-flex">
+                <div class="column is-4-desktop is-flex is-full-mobile is-6-tablet">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
                             <i class="fa fa-empire"></i>
@@ -75,7 +75,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="column is-4 is-flex">
+                <div class="column is-full-mobile is-4-desktop is-flex is-6-tablet">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
                             <i class="fa fa-apple"></i>
@@ -88,7 +88,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="column is-4 is-flex">
+                <div class="column is-full-mobile is-4-desktop is-flex is-6-tablet">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
                             <i class="fa fa-apple"></i>
@@ -101,7 +101,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="column is-4 is-flex">
+                <div class="column is-full-mobile is-4-desktop is-flex is-6-tablet">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
                             <i class="fa fa-apple"></i>
@@ -115,7 +115,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="column is-4 is-flex">
+                <div class="column is-full-mobile is-4-desktop is-flex is-6-tablet">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
                             <i class="fa fa-apple"></i>
