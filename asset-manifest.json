@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jm-software-website/static/css/main.2bc89781.css",
+    "main.js": "/jm-software-website/static/js/main.9a0c97bf.js",
+    "static/js/787.ef3c5204.chunk.js": "/jm-software-website/static/js/787.ef3c5204.chunk.js",
+    "index.html": "/jm-software-website/index.html",
+    "main.2bc89781.css.map": "/jm-software-website/static/css/main.2bc89781.css.map",
+    "main.9a0c97bf.js.map": "/jm-software-website/static/js/main.9a0c97bf.js.map",
+    "787.ef3c5204.chunk.js.map": "/jm-software-website/static/js/787.ef3c5204.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bc89781.css",
+    "static/js/main.9a0c97bf.js"
+  ]
+}
