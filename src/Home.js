@@ -53,7 +53,7 @@ const Home = () => {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <h1 className="title">
-                            Excellent software doesn't have to cost an arm and a leg.
+                            Excellent software, built the way you want it.
                         </h1>
                         <h2 className="subtitle">
                             Your experts in functional, modern and extensible software.
