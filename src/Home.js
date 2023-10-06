@@ -38,9 +38,9 @@ const Home = () => {
 
                                         <ul>
                                             <li className={"mx-3"}>
-                                                 <span className="icon">
+                                                 <a href="https://github.com/jackmillward" target="_blank" style={{borderBottom: "none"}}>
                                                     <i className="lni lni-github-original is-size-5"></i>
-                                                </span>
+                                                </a>
                                             </li>
                                             <li><a href="/">Home</a></li>
                                         </ul>
