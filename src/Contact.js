@@ -4,9 +4,9 @@ import Footer from "./components/Footer";
 const Contact = () => {
     return (<>
         <section className="hero is-white is-medium is-bold">
-            <div className="hero-head">
-                <Header />
-            </div>
+            {/*<div className="hero-head">*/}
+            {/*    <Header />*/}
+            {/*</div>*/}
             <div className="hero-body">
                 <div className="container has-text-centered">
                     <h1 className="title">
@@ -52,7 +52,7 @@ const Contact = () => {
             </section>
         </div>
 
-        <Footer />
+        {/*<Footer />*/}
     </>)
 }
 

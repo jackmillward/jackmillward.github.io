@@ -1,249 +1,135 @@
 import {Fragment} from 'react';
-import 'bulma/css/bulma.min.css';
 import './Home.css';
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import PageSwirls from "./components/PageSwirls";
 
 const Home = () => {
-    return (<>
-        <section className="hero is-white is-medium is-bold">
-            <div className="hero-head">
-                <Header />
-            </div>
-            <div className="hero-body">
-                <div className="container has-text-centered">
-                    <h1 className="title">
-                        Excellent software, built the way you want it.
-                    </h1>
-                    <h2 className="subtitle">
-                        Your experts in functional, modern and extensible software.
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <div className="box cta">
-            <p className="has-text-centered">
-                Take a look below at what we can offer your business.
-            </p>
-        </div>
-        <section className="container mb-4">
-            <div className="columns features is-multiline is-mobile">
-                <div className="column is-4-desktop is-flex is-full-mobile is-6-tablet">
-                    <div className="card is-shady">
-                        <div className="card-image has-text-centered">
-                            <i className="fa fa-paw"></i>
-                        </div>
-                        <div className="card-content">
-                            <div className="content">
-                                <h4>Responsive Design</h4>
-                                <p>As experts in PHP, Laravel and JavaScript development, we can deliver anything
-                                    from simple websites to complex APIs. Utilising frameworks like Laravel, React
-                                    and Vue, we can meet almost any vision.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-4-desktop is-flex is-full-mobile is-6-tablet">
-                    <div className="card is-shady">
-                        <div className="card-image has-text-centered">
-                            <i className="fa fa-empire"></i>
-                        </div>
-                        <div className="card-content">
-                            <div className="content">
-                                <h4>Deployment &amp; CI/CD</h4>
-                                <p>Great code is worth nothing if it can't be deployed painlessly. Our developers
-                                    have an extensive skillset with a variety of workflows to make sure that the
-                                    latest code is deployed to suit your needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-full-mobile is-4-desktop is-flex is-6-tablet">
-                    <div className="card is-shady">
-                        <div className="card-image has-text-centered">
-                            <i className="fa fa-apple"></i>
-                        </div>
-                        <div className="card-content">
-                            <div className="content">
-                                <h4>Testing</h4>
-                                <p>Utilising frameworks like PHPUnit &amp; Jest, we can make sure that the code that
-                                    we deliver is to the highest-standard possible, as well as protecting the code
-                                    from regressions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-full-mobile is-4-desktop is-flex is-6-tablet">
-                    <div className="card is-shady">
-                        <div className="card-image has-text-centered">
-                            <i className="fa fa-apple"></i>
-                        </div>
-                        <div className="card-content">
-                            <div className="content">
-                                <h4>Cloud Computing</h4>
-                                <p>No matter the size of your project, cloud computing has a function for you. As
-                                    experts on AWS and Google Cloud Platform, we can help make sure your application
-                                    scales properly, ensuring that costs are maintained for you and your customers
-                                    get the best experience possible.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-full-mobile is-4-desktop is-flex is-6-tablet">
-                    <div className="card is-shady">
-                        <div className="card-image has-text-centered">
-                            <i className="fa fa-apple"></i>
-                        </div>
-                        <div className="card-content">
-                            <div className="content">
-                                <h4>Data Storage</h4>
-                                <p>Whether your older database needs some TLC or you want to use the latest and
-                                    greatest technology, we can help.</p>
-                                <p>We happily work with MySQL, MariaDB, PostgreSQL, MongoDB, CouchDB, Firebase or
-                                    even CloudSQL/Amazon RDS.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-full-mobile is-4-desktop is-flex is-6-tablet">
-                    <div className="card is-shady">
-                        <div className="card-image has-text-centered">
-                            <i className="fa fa-apple"></i>
-                        </div>
-                        <div className="card-content">
-                            <div className="content">
-                                <h4>Open Source</h4>
-                                <p>We love free and open-source software, and are champions of using Linux to run
-                                    all of our stack.</p>
+    const featuresData = [
+        {
+            icon: 'laptop-phone',
+            title: 'Responsive design',
+            paragraphs: [
+                'As experts in PHP, Laravel and JavaScript development, we can deliver anything from simple websites to complex APIs. Utilising frameworks like Laravel, React and Vue, we can meet almost any vision.',
+            ],
+        },
+        {
+            icon: 'helmet',
+            title: 'Deployment & CI/CD',
+            paragraphs: [
+                'Great code is worth nothing if it can\'t be deployed painlessly. Our developers have an extensive skillset with a variety of workflows to make sure that the latest code is deployed to suit your needs.',
+            ],
+        },
+        {
+            icon: 'bug',
+            title: 'Testing',
+            paragraphs: [
+                'Utilising frameworks like PHPUnit & Jest, we can make sure that the code that we deliver is to the highest-standard possible, as well as protecting the code from regressions.'
+            ],
+        },
+        {
+            icon: 'cloud',
+            title: 'Cloud Computing',
+            paragraphs: [
+                'No matter the size of your project, cloud computing has a function for you. As experts on AWS and Google Cloud Platform, we can help make sure your application scales properly, ensuring that costs are maintained for you and your customers get the best experience possible.'
+            ],
+        },
+        {
+            icon: 'harddrive',
+            title: 'Data Storage',
+            paragraphs: [
+                'Whether your older database needs some TLC or you want to use the latest and greatest technology, we can help.',
+                'We happily work with MySQL, MariaDB, PostgreSQL, MongoDB, CouchDB, Firebase or even CloudSQL/Amazon RDS.',
+            ],
+        },
+        {
+            icon: 'code',
+            title: 'Open Source',
+            paragraphs: [
+                'We love free and open-source software, and are champions of using Linux to run all of our stack.'
+            ],
+        },
+    ]
+
+    return (
+        <>
+            <section
+                id="home"
+                className="relative z-10 overflow-hidden pt-[140px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+            >
+                <div className="container">
+                    <div className="-mx-4 flex flex-wrap">
+                        <div className="w-full px-4">
+                            <div
+                                className="wow fadeInUp mx-auto max-w-[800px] text-center"
+                                data-wow-delay=".2s"
+                            >
+                                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                                    Excellent software built the way you want it.
+                                </h1>
+                                <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
+                                    Your experts in functional, modern and extensible software.
+                                </p>
+                                {/*<div*/}
+                                {/*    className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">*/}
+                                {/*    <a*/}
+                                {/*        href="https://nextjstemplates.com/templates/startup"*/}
+                                {/*        className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"*/}
+                                {/*    >*/}
+                                {/*        Download Now*/}
+                                {/*    </a>*/}
+                                {/*    <a*/}
+                                {/*        href="https://github.com/NextJSTemplates/startup-nextjs"*/}
+                                {/*        className="rounded-md bg-black/20 py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"*/}
+                                {/*    >*/}
+                                {/*        Star on GitHub*/}
+                                {/*    </a>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                     </div>
                 </div>
 
-            </div>
-            {/* <div className="intro column is-8 is-offset-2"> */}
-            {/*     <h2 className="title">Perfect for developers or designers!</h2><br /> */}
-            {/*     <p className="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a. Neque egestas congue quisque egestas diam in arcu cursus.</p> */}
-            {/* </div> */}
-            {/* <div className="sandbox"> */}
-            {/*     <div className="tile is-ancestor"> */}
-            {/*         <div className="tile is-parent is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <p className="title">Hello World</p> */}
-            {/*                 <p className="subtitle">What is up?</p> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*         <div className="tile is-parent is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <p className="title">Foo</p> */}
-            {/*                 <p className="subtitle">Bar</p> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*         <div className="tile is-parent is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <p className="title">Third column</p> */}
-            {/*                 <p className="subtitle">With some content</p> */}
-            {/*                 <div className="content"> */}
-            {/*                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p> */}
-            {/*                 </div> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*     </div> */}
-            {/*     <div className="tile is-ancestor"> */}
-            {/*         <div className="tile is-vertical is-8"> */}
-            {/*             <div className="tile"> */}
-            {/*                 <div className="tile is-parent is-vertical"> */}
-            {/*                     <article className="tile is-child notification is-white"> */}
-            {/*                         <p className="title">Vertical tiles</p> */}
-            {/*                         <p className="subtitle">Top box</p> */}
-            {/*                     </article> */}
-            {/*                     <article className="tile is-child notification is-white"> */}
-            {/*                         <p className="title">Vertical tiles</p> */}
-            {/*                         <p className="subtitle">Bottom box</p> */}
-            {/*                     </article> */}
-            {/*                 </div> */}
-            {/*                 <div className="tile is-parent"> */}
-            {/*                     <article className="tile is-child notification is-white"> */}
-            {/*                         <p className="title">Middle box</p> */}
-            {/*                         <p className="subtitle">With an image</p> */}
-            {/*                         <figure className="image is-4by3"> */}
-            {/*                             <img src="https://picsum.photos/640/480/?random" alt="Description" /> */}
-            {/*                         </figure> */}
-            {/*                     </article> */}
-            {/*                 </div> */}
-            {/*             </div> */}
-            {/*             <div className="tile is-parent is-shady"> */}
-            {/*                 <article className="tile is-child notification is-white"> */}
-            {/*                     <p className="title">Wide column</p> */}
-            {/*                     <p className="subtitle">Aligned with the right column</p> */}
-            {/*                     <div className="content"> */}
-            {/*                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p> */}
-            {/*                     </div> */}
-            {/*                 </article> */}
-            {/*             </div> */}
-            {/*         </div> */}
-            {/*         <div className="tile is-parent is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <div className="content"> */}
-            {/*                     <p className="title">Tall column</p> */}
-            {/*                     <p className="subtitle">With even more content</p> */}
-            {/*                     <div className="content"> */}
-            {/*                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula */}
-            {/*                         eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p> */}
-            {/*                         <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet */}
-            {/*                         felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p> */}
-            {/*                         <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam */}
-            {/*                         ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p> */}
-            {/*                     </div> */}
-            {/*                 </div> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*     </div> */}
-            {/*     <div className="tile is-ancestor"> */}
-            {/*         <div className="tile is-parent is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <p className="title">Side column</p> */}
-            {/*                 <p className="subtitle">With some content</p> */}
-            {/*                 <div className="content"> */}
-            {/*                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p> */}
-            {/*                 </div> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*         <div className="tile is-parent is-8 is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <p className="title">Main column</p> */}
-            {/*                 <p className="subtitle">With some content</p> */}
-            {/*                 <div className="content"> */}
-            {/*                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p> */}
-            {/*                 </div> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*     </div> */}
-            {/*     <div className="tile is-ancestor"> */}
-            {/*         <div className="tile is-parent is-8 is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <p className="title">Murphy's law</p> */}
-            {/*                 <p className="subtitle">Anything that can go wrong will go wrong</p> */}
-            {/*                 <div className="content"> */}
-            {/*                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p> */}
-            {/*                 </div> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*         <div className="tile is-parent is-shady"> */}
-            {/*             <article className="tile is-child notification is-white"> */}
-            {/*                 <p className="title">Main column</p> */}
-            {/*                 <p className="subtitle">With some content</p> */}
-            {/*                 <div className="content"> */}
-            {/*                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p> */}
-            {/*                 </div> */}
-            {/*             </article> */}
-            {/*         </div> */}
-            {/*     </div> */}
-            {/* </div> */}
-        </section>
+                <PageSwirls />
+            </section>
+            <section
+                id="features"
+                className="bg-primary/[.03] py-16 md:py-20 lg:py-28"
+            >
+                <div className="container">
+                    <div
+                        className="wow fadeInUp w-full mx-auto text-center"
+                        data-wow-delay=".1s"
+                        style={{maxWidth: "600px", marginBottom: "100px"}}
+                    >
+                        <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+                            Our Services
+                        </h2>
+                        <p className="text-base !leading-relaxed text-body-color md:text-lg">
+                            Take a look at what skills and knowledge we can bring to your project.
+                        </p>
+                    </div>
 
-        <Footer />
-    </>)
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+                        {featuresData.map((feature) => (
+                            <div className="w-full">
+                                <div className="wow fadeInUp" data-wow-delay=".15s">
+                                    <div
+                                        className="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+                                        <i className={`lni lni-${feature.icon} text-3xl`}/>
+                                    </div>
+                                    <h3 className="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
+                                        {feature.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </>
+    )
 }
 
 export default Home;

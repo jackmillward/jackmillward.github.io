@@ -9,33 +9,33 @@ import Home from './Home';
 import Contact from "./Contact";
 import reportWebVitals from './reportWebVitals';
 import PageTitle from "./PageTitle";
+import RootLayout from "./components/Layout";
+
+const getRouteComponent = (children, pageTitle) => (
+    <RootLayout>
+        <PageTitle title={pageTitle}>
+            {children}
+        </PageTitle>
+    </RootLayout>
+)
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: (
-            <PageTitle title="Home">
-                <Home />
-            </PageTitle>
-        )
+        element: getRouteComponent(<Home/>, "Home"),
     },
     {
         path: '/contact',
-        element: (
-            <PageTitle title="Contact">
-                <Contact />
-            </PageTitle>
-        ),
+        element: getRouteComponent(<Contact/>, "Contact"),
     }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-      <RouterProvider router={router}>
-          <Home />
-      </RouterProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <RouterProvider router={router}>
+        </RouterProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
