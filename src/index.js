@@ -8,15 +8,24 @@ import './index.css';
 import Home from './Home';
 import Contact from "./Contact";
 import reportWebVitals from './reportWebVitals';
+import PageTitle from "./PageTitle";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Home />,
+        element: (
+            <PageTitle title="Home">
+                <Home />
+            </PageTitle>
+        )
     },
     {
         path: '/contact',
-        element: <Contact />,
+        element: (
+            <PageTitle title="Contact">
+                <Home />
+            </PageTitle>
+        ),
     }
 ])
 
