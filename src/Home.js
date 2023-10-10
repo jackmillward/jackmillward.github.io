@@ -26,7 +26,7 @@ const Home = () => {
                 Take a look below at what we can offer your business.
             </p>
         </div>
-        <section className="container">
+        <section className="container mb-4">
             <div className="columns features is-multiline is-mobile">
                 <div className="column is-4-desktop is-flex is-full-mobile is-6-tablet">
                     <div className="card is-shady">
