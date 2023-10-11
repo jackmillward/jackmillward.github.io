@@ -24,10 +24,10 @@ const router = createBrowserRouter([
         path: '/',
         element: getRouteComponent(<Home/>, "Home"),
     },
-    {
-        path: '/contact',
-        element: getRouteComponent(<Contact/>, "Contact"),
-    }
+    // {
+    //     path: '/contact',
+    //     element: getRouteComponent(<Contact/>, "Contact"),
+    // }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

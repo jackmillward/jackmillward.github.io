@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 
 const Header = () => {
+    const { pathname } = useLocation()
 
     const menuData = [
         {
@@ -8,13 +10,15 @@ const Header = () => {
             title: "Home",
             path: "/",
             newTab: false,
+            active: pathname === '/',
         },
-        {
-            id: 2,
-            title: "Contact",
-            path: "/contact",
-            newTab: false,
-        },
+        // {
+        //     id: 2,
+        //     title: "Contact",
+        //     path: "/contact",
+        //     newTab: false,
+        //     active: pathname === '/contact',
+        // },
     ]
 
     // Navbar toggle
@@ -104,11 +108,11 @@ const Header = () => {
                             >
                                 <ul className="block lg:flex lg:space-x-12">
                                     {menuData.map((menuItem, index) => (
-                                        <li key={menuItem.id} className="group relative">
+                                        <li key={menuItem.id} className={`group relative ${menuItem.active ? "border-solid border-dark/30 md:border-b-2" : ""}`}>
                                             {menuItem.path ? (
                                                 <a
                                                     href={menuItem.path}
-                                                    className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                                                    className={`flex py-1 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-4 lg:px-0`}
                                                 >
                                                     {menuItem.title}
                                                 </a>

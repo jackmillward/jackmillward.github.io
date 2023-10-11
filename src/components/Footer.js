@@ -60,15 +60,15 @@ const Footer = () => {
                                         Home{" "}
                                     </a>
                                 </li>
-                                <li>
-                                    <a
-                                        href="/contact"
-                                        className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
-                                    >
-                                        {" "}
-                                        Contact{" "}
-                                    </a>
-                                </li>
+                                {/*<li>*/}
+                                {/*    <a*/}
+                                {/*        href="/contact"*/}
+                                {/*        className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"*/}
+                                {/*    >*/}
+                                {/*        {" "}*/}
+                                {/*        Contact{" "}*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
                             </ul>
                         </div>
                     </div>
